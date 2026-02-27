@@ -4,7 +4,8 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "start": "astro dev",
+    "build": "mkdir -p src/data && node scripts/fetch-projects.mjs && astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
