@@ -5,27 +5,39 @@ import Layout from '../layouts/Layout.astro';
 <Layout title="Stackin Paper | ML Research Portfolio">
   <main class="max-w-4xl mx-auto px-6 py-12 font-sans text-slate-900">
     <header class="mb-12">
-      <h1 class="text-5xl font-black tracking-tighter mb-4 text-slate-900">
-        STACKIN PAPER: <span class="text-blue-600">BUILDING ON ML RESEARCH</span>
-      </h1>
-      
-      <div class="flex gap-2 mb-8">
-        <img src="https://img.shields.io/badge/Python-3.10+-blue.svg" alt="Python" />
-        <img src="https://img.shields.io/badge/PyTorch-2.0+-EE4C2C.svg" alt="PyTorch" />
-        <img src="https://img.shields.io/badge/Status-Active_Research-success.svg" alt="Status" />
-      </div>
+		<h1 
+			class="text-2xl md:text-5xl text-[#bdaa8b] tracking-tight whitespace-nowrap overflow-hidden" 
+			style="font-family: 'Dancing Script', cursive;">
+			Stackin Paper: Building on ML Research
+		</h1>
+	</header>
+		
+	<p class="text-xl leading-relaxed text-slate-700 mb-8">
+		Welcome to <strong>Stacking Paper(s)</strong>! This is my personal playground for breaking down the latest machine learning research papers, implementing them from scratch, and bridging the gap between intertwined topics; all while documenting my findings along the way.
+	</p>
 
-      <p class="text-xl leading-relaxed text-slate-700">
-        Welcome to <strong>Stacking Paper(s)</strong>! This is my personal playground for breaking down the latest machine learning research papers, implementing them from scratch, and bridging the gap between intertwining topics—all while documenting my findings along the way.
-      </p>
-    </header>
 
-    <section class="bg-blue-50 border-l-4 border-blue-500 p-6 mb-12 italic text-slate-700">
-      "Rather than just posting finished code, I use this space to write articles detailing my implementation struggles, architectural decisions, and the 'gotchas' that aren't mentioned in the original papers."
-    </section>
+	<h3 
+		class="text-xl md:text-3xl text-[#bdaa8b] tracking-tight mt-6 mb-2" 
+		style="font-family: 'Dancing Script', cursive;"
+	>
+		Objectives
+	</h3>
+	
+	<p class="text-xl leading-relaxed text-slate-700">
+		When tasked with explaining my objectives for this endeavor, I fall back to a quote from one of my favorite shows, Bleach, to offer some insight:
+	</p>
 
-    <section class="mb-16">
-      <h2 class="text-2xl font-bold mb-6 border-b pb-2">🗂️ Research Logs</h2>
+	<section class="bg-blue-50 border-l-4 border-blue-500 p-6 my-3 italic text-slate-700">
+		"I dislike perfection. If something is perfect, there is nothing above it. There is no room for imagination. No space for intelligence or ability. [...] Be more wonderful than anything that existed before you, but never perfect."
+	</section>
+
+	<p class="text-xl leading-relaxed text-slate-700">
+		I have squandered much of my time in the pursuit of perfection; always planning, rarely executing. My hope with this venture is to change that. To embrace imperfection, and the rich trove of experiences that resides within the pitfalls of mistakes. 
+	</p>
+
+    <section class="mt-12 mb-16">
+      <h2 class="text-2xl font-bold mb-6 border-b pb-2 text-[#bdaa8b]" style="font-family: 'Dancing Script', cursive;">🗂️ Research Logs</h2>
       <div class="overflow-x-auto">
         <table class="w-full text-left border-collapse">
           <thead>
@@ -39,14 +51,14 @@ import Layout from '../layouts/Layout.astro';
           <tbody>
             <tr>
               <td class="p-3 border font-bold">Feb 2026</td>
-              <td class="p-3 border italic">Verifiable Reward RL</td>
-              <td class="p-3 border text-sm text-slate-600">GRPO, LLM-as-a-Judge</td>
+              <td class="p-3 border italic">Gradient Regularization w/ DR.GRPO</td>
+              <td class="p-3 border text-sm text-slate-600">GRPO, Optimization</td>
               <td class="p-3 border text-blue-600 font-semibold"><a href="/projects">View Project</a></td>
             </tr>
             <tr class="text-slate-400">
               <td class="p-3 border italic">Upcoming</td>
-              <td class="p-3 border">DeepSeek-R1 Distillation</td>
-              <td class="p-3 border text-sm">RLHF, KD</td>
+              <td class="p-3 border">Experiential RL</td>
+              <td class="p-3 border text-sm">RL</td>
               <td class="p-3 border italic">WIP</td>
             </tr>
           </tbody>
@@ -55,15 +67,28 @@ import Layout from '../layouts/Layout.astro';
     </section>
 
     <section>
-      <h2 class="text-2xl font-bold mb-6 border-b pb-2">🏗️ Repository Structure</h2>
+      <h2 class="text-2xl font-bold mb-6 border-b pb-2 text-[#bdaa8b]" style="font-family: 'Dancing Script', cursive;">🏗️ Repository Structure</h2>
       <pre class="bg-slate-900 text-slate-100 p-6 rounded-lg font-mono text-sm overflow-x-auto">
-the-paper-trail/
+stackin-paper/
 ├── shared_utils/         &lt;- Custom loaders &amp; metrics
-├── 2026_GRPO_Dataset/    &lt;- Project Folder
-│   ├── README.md         &lt;- 📝 The article/notes
-│   ├── requirements.txt  &lt;- ⚙️ Isolated deps
-│   └── src/              &lt;- 💻 Implementation code
+├── Gradient-Reg/    	  &lt;- Project Folder
+│   ├── README.md         &lt;- The article/notes
+│   ├── requirements.txt  &lt;- Isolated deps
+│   └── src/              &lt;- Implementation code
 └── ...</pre>
+    </section>
+
+	<section>
+      <h2 class="text-2xl font-bold mt-12 mb-6 border-b pb-2 text-[#bdaa8b]" style="font-family: 'Dancing Script', cursive;">🤖 AI Disclosure</h2>
+      <p class="text-xl leading-relaxed text-slate-700 mb-4">
+		I will try to be as transparent as possible regarding my usage of AI where relevant. While it can certainly be tempting to speed up progress and rely entirely on AI to implement these papers, my pursuit of imperfection leaves me perfectly orthogonal to this predisposition.
+	  </p>
+	  <p class="text-xl leading-relaxed text-slate-700 mb-4">
+	  	How can I learn, make mistakes, and be perfectly imperfect without touching upon the work myself ? The extent of my AI usage (unless specified otherwise, which I will explicitly do so where necessary) is to and review & refine my conceptual understanding at the start of the project, and verify key implementation details at the end.
+	  </p>
+	  <p class="text-xl leading-relaxed text-slate-700">
+		Well, that and also this entire website was coded using AI. I am not a frontend developer :)
+	  </p>
     </section>
   </main>
 </Layout>
