@@ -18,16 +18,14 @@ const sortedPosts = posts.sort((a, b) =>
 		</header>
 
 		<div class="space-y-12">
-			{sortedPosts.map((post) => {
-				const slug = post.file.split('/').pop().split('.')[0];
-				
-				return (<article class="group relative">
+			{sortedPosts.map((post) => (
+				<article class="group relative">
 					<div class="flex items-baseline gap-4 mb-2">
 						<time class="font-mono text-xs text-slate-400">{post.frontmatter.pubDate}</time>
 						<div class="h-[1px] flex-grow bg-slate-200 group-hover:bg-blue-300 transition-colors"></div>
 					</div>
 					
-					<a href={`./articles/${slug}`} class="block">
+					<a href={post.url} class="block">
 						<h2 class="text-2xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors mb-2">
 							{post.frontmatter.title}
 						</h2>
@@ -42,8 +40,8 @@ const sortedPosts = posts.sort((a, b) =>
 							))}
 						</div>
 					</a>
-				</article>)
-			})}
+				</article>
+			))}
 		</div>
 
 		{posts.length === 0 && (
